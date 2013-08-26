@@ -1,0 +1,12 @@
+{
+  "name": "myProject",
+  "version": "0.0.1",
+  "dependencies": {
+    "steroids-js": "2.7.x",
+    "ember": "~1.0.0-rc.7",
+    "backbone": "~1.0.0",
+    "jquery": "~1.9.1",
+    "ember-model": "~0.0.8",
+    "moment": "~2.1.0"
+  }
+}
