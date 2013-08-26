@@ -13,6 +13,7 @@ steroids.config.name = "Agent Run Mobile"
 # -- Location: steroids.config.location --
 # Defines the location of the HTML document that Steroids will load when your app starts.
 # Enabling the tab bar via 'steroids.config.tabBar.enabled = true' will override this value.
+steroids.config.location = "contacts.html"
 # Valid values are:
 #   - "index.html" - served with File URL, like in PhoneGap.
 #   - "http://localhost/index.html" - served from the device's web server.
@@ -31,7 +32,7 @@ steroids.config.hosts = ["http://agentrun-api.herokuapp.com"]
 # Enabling tabs will override steroids.config.location (which is inteded for single WebView apps, i.e. PhoneGap's default behavior) and show the first tab of the tab array on startup.
 # Default: false
 #
-steroids.config.tabBar.enabled = true
+steroids.config.tabBar.enabled = false
 
 #-- Defining tabs via the tab array --
 #An array of tab objects that specify which tabs are shown on app startup.
@@ -50,11 +51,6 @@ steroids.config.tabBar.tabs = [
     icon: "icons/telescope@2x.png"
     location: "http://localhost/contacts.html"
   },
-  {
-    title: "Home"
-    icon: "icons/pill@2x.png"
-    location: "http://localhost/home.html"
-  }
 ]
 
 # -- Selected tab background image --
@@ -90,7 +86,7 @@ steroids.config.loadingScreen.tintColor = "#262626"
 # Sets a built-in theme for the navigation bar and tab bar. Valid values are "black" and "default".
 # Default: "default"
 #
-# steroids.config.theme = "default"
+steroids.config.theme = "default"
 
 # -- Status bar --
 # Sets the visibilty of the status bar on iOS (shows the carrier, clock and battery status)

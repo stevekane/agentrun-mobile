@@ -13,6 +13,7 @@
   <!-- cordova.js is served from localhost to ensure the correct version -->
   <script src="http://localhost/appgyver/cordova.js"></script>
   <script src="components/steroids-js/steroids.js"></script>
+  <script src="components/hammerjs/dist/hammer.js"></script>
   <script src="components/jquery/jquery.js"></script>
   <script src="components/handlebars/handlebars.js"></script>
   <script src="components/ember/ember.js"></script>
@@ -22,19 +23,31 @@
 <body>
   <header class="topcoat-navigation-bar">
     <div class="topcoat-navigation-bar__item center full">
-      <h3 class="topcoat-navigation-bar__title">Agent Run</h3>
+      <h3 class="topcoat-navigation-bar__title">Mantra Inc.</h3>
     </div> 
   </header>
 
-  <script type="text/x-handlebars">
+  <script type="text/x-handlebars" data-template-name="index">
+    {{#if view.active}}
     <div class="topcoat-list__container">
       <h3 class="topcoat-list__header">People</h3>
       <ul class="topcoat-list"> 
-        {{#each contacts}}
+        {{#each contacts itemViewClass="App.ContactListItemView"}}
           <li class="topcoat-list__item">{{firstName}} {{lastName}}</li>
         {{/each}} 
       </ul>
     </div>
+    {{/if}}
   </script>
+
+  <script type="text/x-handlebars" data-template-name="contact">
+    {{#if view.active}}
+    <div class="topcoat-list__container">
+      <h3 class="topcoat-list__header">{{firstName}} {{lastName}}'s Profile</h3>
+      <img class="topcoat-image" {{bindAttr src="sourceUrl"}}></img>
+    </div>
+    {{/if}}
+  </script>
+
 </body>
 </html>
